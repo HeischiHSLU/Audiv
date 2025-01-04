@@ -29,6 +29,7 @@ In Digital Ideation, it is common to have a demo of your newly created project. 
 Our Project can be roughly cut into 3 Pieces:  Video Cuting, Mood generation and Sound generation. For each of those 3 there will be a short section below talking about where our Project does these things inside our Python skript
 
 **Video2Image**
+
 For us to Process our Video easy and not having to have an complex Video analysation we use a Single Frame of a video instead of the whole Video. If u upload a Video on Gradio u will have the option to pick between the 33% Frame and the 66% Frame. We use this methode as it was easy and Quick to implement in Gradio.  
 ```python
 def capture_frames(video_path, output_path_33, output_path_66):
