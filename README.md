@@ -20,7 +20,8 @@ With Audiv, you can upload a video (e.g., from your newest project), and the AI 
 
 ## Process
 
-###Ideation:
+### Ideation:
+
 In Digital Ideation, it is common to have a demo of your newly created project. In our case, this is mostly done via a video. Unfortunately, in nearly every case, we didn’t have the time to produce a clean and polished video. This often leads to feedback about the video but not detailed feedback about our project. The most common feedback was that our videos lacked audio. We thought this module would be perfect to create an AI that generates fitting audio — and that’s exactly what we did.
 
 
@@ -62,7 +63,7 @@ def capture_frames(video_path, output_path_33, output_path_66):
 ```
 
 **Image2Text**
-
+Now that we have an image we use the an Replicate query from yorickvp/llava-13b to get Discription of the Mood of the image. to 
 ```python
 def ImageToText(image_path,prompt):
     with open(image_path, "rb") as image_file:
