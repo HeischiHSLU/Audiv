@@ -63,7 +63,8 @@ def capture_frames(video_path, output_path_33, output_path_66):
 ```
 
 **Image2Text**
-Now that we have an image we use the an Replicate query from yorickvp/llava-13b to get Discription of the Mood of the image. to 
+
+Now that we have an image we use the an Replicate query from yorickvp/llava-13b to get Discription of the Mood of the image. To get a Discription we can use We worked out an Prompt that gives us a reliable Discription "Describe a fitting Background Music with less than 30 words. It must give an answer to the following 3 points: atmosphere, rhythm, melody"
 ```python
 def ImageToText(image_path,prompt):
     with open(image_path, "rb") as image_file:
@@ -87,6 +88,8 @@ def ImageToText(image_path,prompt):
     return output
 ```
 **Text2Audio**
+
+Now the most resource-intensive part of our Pipline, the generation of the Audio itself. With the now generate Description of Mood Melody and Rythm of our Video we can use the "audio-ldm" form haohgeliu to generate the Audio. This is our finla Replicate Query and will output the wav. file wich we will then forward to the Gradio Interface
 ```python
 def TextToAudio(prompt):
     global AudioOutput
